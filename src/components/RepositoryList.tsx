@@ -1,15 +1,15 @@
-import { RepositoryItem } from "./RepositoryItem";
-import '../styles/Repositories.scss';
-import { useEffect, useState } from "react";
-
-// https://api.github.com/users/niltoneapontes/repos
-
 interface Repository {
   id: string;
   name: string;
   description: string;
   html_url: string;
 }
+
+import { RepositoryItem } from "./RepositoryItem";
+import '../styles/Repositories.scss';
+import { useEffect, useState } from "react";
+
+// https://api.github.com/users/niltoneapontes/repos
 
 export function RepositoryList() {
   const [repositories, setRepositories] = useState<Repository[]>([]);
